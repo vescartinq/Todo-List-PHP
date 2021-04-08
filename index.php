@@ -1,26 +1,21 @@
 <?php include("db.php") ?>
 
-<!-- Codigo header cortado e incluido en otro archivo -->
+
 <?php include("includes/header.php")?>
 
 <div class="container p-4">
     <div class="row">
         <div class="col-md-4">
 
-            <!-- ALERTAS -->
             <?php if (isset($_SESSION['message'])) { ?>
             <div class="alert alert-<?= $_SESSION['message_type'];?> alert-dismissible fade show" role="alert">
-                <!-- Muestra desde SESSION el mensaje guardado -->
                 <?= $_SESSION['message'] ?>
-                <!-- Botón para cerrar -->
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <!-- Al ejecutarse, limpia los datos de sesión -->
             <?php session_unset(); } ?>
 
-            <!-- FORMULARIO PARA GUARDAR TAREA -->
             <div class="card card-body">
                 <form action="save_task.php" method="POST">
                     <div class="form-group">
@@ -46,8 +41,6 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Recuperar todas las tareas almacenadas y pintarlas -->
-                    <!-- Mientras hayan tareas, una fila por recorrido -->
                     <?php
                     $query="SELECT * FROM task";
                     $result_tasks=mysqli_query($conn,$query);
@@ -57,7 +50,6 @@
                         <td><?php echo $row['title'] ?></td>
                         <td><?php echo $row['description'] ?></td>
                         <td><?php echo $row['created_at'] ?></td>
-                        <!-- Crea boton editar enlazando al id de cada tarea -->
                         <td>
                             <a href="edit_task.php?id=<?php echo $row['id']?>" class="btn btn-secondary">
                                 <i class="fas fa-marker"></i>
