@@ -24,7 +24,7 @@ App orientada a aprender PHP
 
 \*\*Pre requesitos de Instalacion :
 
-- Poseer una version Actualizada de cualquier navegador WED(Chorme,Morzilla
+- Poseer una version Actualizada de cualquier navegador (Chorme,Morzilla
   Firefox,Edge)
 - Instalar Xampp en el Ordenado y Ubicar el Repositorio o Carpeta en la carpeta
   htdocs.
@@ -32,5 +32,5 @@ App orientada a aprender PHP
 
 \*Ejecucion:
 
-- Iniciar el servidor Web Xampp.
+- Iniciar el servidor Xampp.
 - Acceder a la siguiente ruta: http://localhost/php_mysql_crud/index.php.
