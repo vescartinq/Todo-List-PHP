@@ -32,5 +32,5 @@ App orientada a aprender PHP
 
 \*Ejecucion:
 
-- Iniciar el servidor Wed Xampp.
+- Iniciar el servidor Web Xampp.
 - Acceder a la siguiente ruta: http://localhost/php_mysql_crud/index.php.
